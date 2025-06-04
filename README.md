@@ -36,7 +36,7 @@ Instalación
 git clone https://github.com/stevenbisbi/ParcialFinalBack.git
 cd ParcialFinalBack
 npm install
-npm run dev
+npm start
 ```
 Estructura de endpoints
 ```
@@ -46,11 +46,7 @@ GET    /api/users      - Listar todos los usuarios
 POST   /api/users      - Crear nuevo usuario
 ```
 `
-Scripts disponibles
-```
-npm run dev: Inicia el servidor en modo desarrollo con nodemon
 
-```
 
 Configuración conjunta
 Para ejecutar ambos proyectos simultáneamente:
