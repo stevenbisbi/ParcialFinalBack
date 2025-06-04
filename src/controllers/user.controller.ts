@@ -6,7 +6,7 @@ export const addUser = (req: Request, res: Response) => {
 
   if (!firstName || !lastName || !idNumber || !email || !roleId) {
     res.status(400).json({ message: "Todos los campos son requeridos." });
-    return; // Solo usa return para salir temprano, sin devolver res
+    return;
   }
 
   const roleExists = roles.find((r) => r.id === roleId);
@@ -25,7 +25,7 @@ export const addUser = (req: Request, res: Response) => {
   };
 
   users.push(newUser);
-  res.status(201).json(newUser); // Sin return
+  res.status(201).json(newUser);
 };
 
 export const getUsers = (_req: Request, res: Response) => {
@@ -37,5 +37,5 @@ export const getUsers = (_req: Request, res: Response) => {
     };
   });
 
-  res.json(response); // Sin return
+  res.json(response);
 };
