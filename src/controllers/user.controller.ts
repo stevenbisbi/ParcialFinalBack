@@ -2,9 +2,9 @@ import { Request, Response } from "express";
 import { roles, users } from "../data/db";
 
 export const addUser = (req: Request, res: Response) => {
-  const { firstName, lastName, idNumber, email, roleId } = req.body;
+  const { firstName, lastName, dni, email, roleId } = req.body;
 
-  if (!firstName || !lastName || !idNumber || !email || !roleId) {
+  if (!firstName || !lastName || !dni || !email || !roleId) {
     res.status(400).json({ message: "Todos los campos son requeridos." });
     return;
   }
@@ -19,7 +19,7 @@ export const addUser = (req: Request, res: Response) => {
     id: users.length + 1,
     firstName,
     lastName,
-    idNumber,
+    dni,
     email,
     roleId,
   };

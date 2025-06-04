@@ -4,7 +4,7 @@ export const users: {
   id: number;
   firstName: string;
   lastName: string;
-  idNumber: string;
+  dni: string;
   email: string;
   roleId: number;
 }[] = [];
