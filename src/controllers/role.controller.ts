@@ -6,14 +6,14 @@ export const addRole = (req: Request, res: Response) => {
 
   if (!name) {
     res.status(400).json({ message: "El nombre del rol es requerido." });
-    return; // Solo retorna para cortar la ejecución
+    return;
   }
 
   const newRole = { id: roles.length + 1, name, description };
   roles.push(newRole);
-  res.status(201).json(newRole); // Sin 'return'
+  res.status(201).json(newRole);
 };
 
 export const getRoles = (_req: Request, res: Response) => {
-  res.json(roles); // Sin 'return'
+  res.json(roles);
 };
